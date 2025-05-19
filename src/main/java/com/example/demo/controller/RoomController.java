@@ -12,8 +12,9 @@ import com.example.demo.model.dto.RoomDto;
 import com.example.demo.service.RoomService;
 
 @Controller
-@RequestMapping(value ={"/room" ,"/rooms"})
+@RequestMapping(value ={"/room","/rooms"})
 public class RoomController {
+	
 	@Autowired
 	private RoomService roomService;
 
@@ -23,7 +24,7 @@ public class RoomController {
 		List<RoomDto> roomDtos = roomService.findAllRooms();
 		model.addAttribute("roomDto", roomDto);
 		model.addAttribute("roomDtos", roomDtos);
-		return "room/room.jsp";
+		return "room/room";
 	}
 	
 }
