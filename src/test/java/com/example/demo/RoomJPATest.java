@@ -1,23 +1,23 @@
 package com.example.demo;
 
-import com.example.demo.model.entity.Room;
-import com.example.demo.repository.RoomRepository;
-
 import java.util.Scanner;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.example.demo.model.entity.Room;
+import com.example.demo.repository.RoomRepository;
+
 @SpringBootTest
 public class RoomJPATest {
-
-    @Autowired
-    private RoomRepository roomRepository;
-
-    @Test
-    public void testRoomAdd() {
-    	Scanner scanner = new Scanner(System.in);
+	
+	@Autowired
+	private RoomRepository roomRepository;
+	
+	@Test
+	public void testRoomAdd() {
+		Scanner scanner = new Scanner(System.in);
 		System.out.print("請輸入房號:");
 		Integer roomId = scanner.nextInt();
 		System.out.print("請輸入房名:");
@@ -29,5 +29,6 @@ public class RoomJPATest {
 		// 新增到資料庫
 		room = roomRepository.save(room);
 		System.out.println("測試新增:" + room);
-    }
+	}
+	
 }
