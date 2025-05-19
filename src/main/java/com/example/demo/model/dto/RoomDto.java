@@ -3,6 +3,7 @@ package com.example.demo.model.dto;
 import org.hibernate.validator.constraints.Range;
 
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -16,7 +17,7 @@ public class RoomDto {
 	@Min(value=1)
 	@NotNull(message = "{roomDto.roomId.notNull}")
 	private Integer roomId;
-	@NotNull(message = "{roomDto.roomName.notNull}")
+	@NotEmpty(message = "{roomDto.roomName.NotEmpty}")
 	@Size(min = 2, message = "{roomDto.roomName.Size}")
 	private String roomName;
 	@NotNull(message = "{roomDto.roomSize.notNull}")
