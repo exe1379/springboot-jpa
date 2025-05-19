@@ -67,8 +67,7 @@ public class RoomServiceImpl implements RoomService {
 
 	@Override
 	public void deleteRoom(Integer roomId) {
-		// TODO Auto-generated method stub
-
+		roomRepository.deleteById(roomId);
 	}
 
 }
