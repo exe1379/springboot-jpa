@@ -12,11 +12,9 @@
 	</head>
 	<body>
 		<!-- menu bar include -->
-		<%@ include file="/WEB-INF/view/menu.jspf" %>
-		
+		<%@ include file="/WEB-INF/view/menu.jspf" %>		
 		<!-- body content -->
-		<div style="padding: 15px">
-			
+		<div style="padding: 15px">			
 			<table>
 				<tr>
 					<!-- Room 表單修改 -->
@@ -33,10 +31,8 @@
 								<sp:errors path="roomSize" style="color: red" />
 								<p />
 								<button type="submit" class="pure-button pure-button-primary">修改</button>
-							</fieldset>
-							
+							</fieldset>							
 						</sp:form>
-						
 					</td>
 				</tr>
 			</table>
