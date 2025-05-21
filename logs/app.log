@@ -746,3 +746,209 @@ Consider defining a bean of type 'com.example.demo.service.CertService' in your 
 2025-05-21T15:01:02.168+08:00  INFO 16072 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-05-21T15:01:02.183+08:00  INFO 16072 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
 2025-05-21T15:05:07.070+08:00  WARN 16072 --- [springboot-jpa] [http-nio-8081-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<?> com.example.demo.controller.RestLoginController.login(com.example.demo.model.dto.LoginRequest,jakarta.servlet.http.HttpSession)]
+2025-05-21T15:30:51.472+08:00  INFO 16072 --- [springboot-jpa] [RMI TCP Connection(41)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-21T15:30:51.474+08:00  INFO 16072 --- [springboot-jpa] [RMI TCP Connection(41)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-21T15:30:51.478+08:00  INFO 16072 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-21T15:30:51.482+08:00  INFO 16072 --- [springboot-jpa] [RMI TCP Connection(41)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21T15:30:51.483+08:00  INFO 16072 --- [springboot-jpa] [RMI TCP Connection(41)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-21T15:30:51.485+08:00  INFO 16072 --- [springboot-jpa] [RMI TCP Connection(41)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-21T15:30:53.316+08:00  INFO 18208 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Starting SpringbootJpaApplication using Java 21.0.6 with PID 18208 (C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa\target\classes started by Zenboo 13 in C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa)
+2025-05-21T15:30:53.319+08:00  INFO 18208 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-05-21T15:30:53.822+08:00  INFO 18208 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-21T15:30:53.872+08:00  INFO 18208 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2025-05-21T15:30:54.239+08:00  INFO 18208 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-21T15:30:54.251+08:00  INFO 18208 --- [springboot-jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-21T15:30:54.251+08:00  INFO 18208 --- [springboot-jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-21T15:30:54.408+08:00  INFO 18208 --- [springboot-jpa] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-21T15:30:54.414+08:00  INFO 18208 --- [springboot-jpa] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-21T15:30:54.415+08:00  INFO 18208 --- [springboot-jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1064 ms
+2025-05-21T15:30:54.423+08:00 ERROR 18208 --- [springboot-jpa] [main] o.s.b.web.embedded.tomcat.TomcatStarter  : Error starting Tomcat context. Exception: org.springframework.beans.factory.BeanCreationException. Message: Error creating bean with name 'com.example.demo.filter.RestLoginFilter': Failed to convert property value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter'; Cannot convert value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter': no matching editors or conversion strategy found
+2025-05-21T15:30:54.444+08:00  INFO 18208 --- [springboot-jpa] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-05-21T15:30:54.452+08:00  WARN 18208 --- [springboot-jpa] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2025-05-21T15:30:54.458+08:00  INFO 18208 --- [springboot-jpa] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-05-21T15:30:54.471+08:00 ERROR 18208 --- [springboot-jpa] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.context.ApplicationContextException: Unable to start web server
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:170) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621) ~[spring-context-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:753) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1362) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1351) ~[spring-boot-3.4.5.jar:3.4.5]
+	at com.example.demo.SpringbootJpaApplication.main(SpringbootJpaApplication.java:11) ~[classes/:na]
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:147) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:107) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:517) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:219) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:193) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:167) ~[spring-boot-3.4.5.jar:3.4.5]
+	... 8 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'com.example.demo.filter.RestLoginFilter': Failed to convert property value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter'; Cannot convert value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter': no matching editors or conversion strategy found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:614) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:207) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:211) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:202) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(ServletContextInitializerBeans.java:97) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:86) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:271) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:245) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:52) ~[spring-boot-3.4.5.jar:3.4.5]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:4464) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:772) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1193) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317) ~[na:na]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:749) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:203) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:412) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:870) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:438) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:128) ~[spring-boot-3.4.5.jar:3.4.5]
+	... 13 common frames omitted
+Caused by: org.springframework.beans.ConversionNotSupportedException: Failed to convert property value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter'; Cannot convert value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter': no matching editors or conversion strategy found
+	at org.springframework.beans.AbstractNestablePropertyAccessor.convertIfNecessary(AbstractNestablePropertyAccessor.java:594) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.convertForProperty(AbstractNestablePropertyAccessor.java:608) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.BeanWrapperImpl.convertForProperty(BeanWrapperImpl.java:190) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.convertForProperty(AbstractAutowireCapableBeanFactory.java:1777) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1721) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1466) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:606) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 49 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot convert value of type 'com.example.demo.filter.RestLoginFilter' to required type 'jakarta.servlet.Filter' for property 'filter': no matching editors or conversion strategy found
+	at org.springframework.beans.TypeConverterDelegate.convertIfNecessary(TypeConverterDelegate.java:273) ~[spring-beans-6.2.6.jar:6.2.6]
+	at org.springframework.beans.AbstractNestablePropertyAccessor.convertIfNecessary(AbstractNestablePropertyAccessor.java:589) ~[spring-beans-6.2.6.jar:6.2.6]
+	... 55 common frames omitted
+
+2025-05-21T15:32:18.247+08:00  INFO 17492 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Starting SpringbootJpaApplication using Java 21.0.6 with PID 17492 (C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa\target\classes started by Zenboo 13 in C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa)
+2025-05-21T15:32:18.249+08:00  INFO 17492 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-05-21T15:32:18.704+08:00  INFO 17492 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-21T15:32:18.771+08:00  INFO 17492 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
+2025-05-21T15:32:19.165+08:00  INFO 17492 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-21T15:32:19.176+08:00  INFO 17492 --- [springboot-jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-21T15:32:19.177+08:00  INFO 17492 --- [springboot-jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-21T15:32:19.330+08:00  INFO 17492 --- [springboot-jpa] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-21T15:32:19.336+08:00  INFO 17492 --- [springboot-jpa] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-21T15:32:19.336+08:00  INFO 17492 --- [springboot-jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1055 ms
+2025-05-21T15:32:19.447+08:00  INFO 17492 --- [springboot-jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-21T15:32:19.492+08:00  INFO 17492 --- [springboot-jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-21T15:32:19.524+08:00  INFO 17492 --- [springboot-jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-21T15:32:19.721+08:00  INFO 17492 --- [springboot-jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-21T15:32:19.743+08:00  INFO 17492 --- [springboot-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-21T15:32:19.863+08:00  INFO 17492 --- [springboot-jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e49437
+2025-05-21T15:32:19.864+08:00  INFO 17492 --- [springboot-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-21T15:32:19.922+08:00  INFO 17492 --- [springboot-jpa] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-21T15:32:20.497+08:00  INFO 17492 --- [springboot-jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-21T15:32:20.536+08:00  INFO 17492 --- [springboot-jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21T15:32:20.765+08:00  INFO 17492 --- [springboot-jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-21T15:32:21.167+08:00  INFO 17492 --- [springboot-jpa] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-05-21T15:32:21.424+08:00  INFO 17492 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-05-21T15:32:21.429+08:00  INFO 17492 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Started SpringbootJpaApplication in 3.495 seconds (process running for 3.963)
+2025-05-21T15:33:08.078+08:00  INFO 17492 --- [springboot-jpa] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-21T15:33:08.080+08:00  INFO 17492 --- [springboot-jpa] [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-21T15:33:08.085+08:00  INFO 17492 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-21T15:33:08.088+08:00  INFO 17492 --- [springboot-jpa] [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21T15:33:08.089+08:00  INFO 17492 --- [springboot-jpa] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-21T15:33:08.096+08:00  INFO 17492 --- [springboot-jpa] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-21T15:33:09.859+08:00  INFO 12944 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Starting SpringbootJpaApplication using Java 21.0.6 with PID 12944 (C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa\target\classes started by Zenboo 13 in C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa)
+2025-05-21T15:33:09.860+08:00  INFO 12944 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-05-21T15:33:10.322+08:00  INFO 12944 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-21T15:33:10.371+08:00  INFO 12944 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 2 JPA repository interfaces.
+2025-05-21T15:33:10.729+08:00  INFO 12944 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-21T15:33:10.740+08:00  INFO 12944 --- [springboot-jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-21T15:33:10.740+08:00  INFO 12944 --- [springboot-jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-21T15:33:10.888+08:00  INFO 12944 --- [springboot-jpa] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-21T15:33:10.893+08:00  INFO 12944 --- [springboot-jpa] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-21T15:33:10.894+08:00  INFO 12944 --- [springboot-jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1002 ms
+2025-05-21T15:33:11.013+08:00  INFO 12944 --- [springboot-jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-21T15:33:11.062+08:00  INFO 12944 --- [springboot-jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-21T15:33:11.093+08:00  INFO 12944 --- [springboot-jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-21T15:33:11.296+08:00  INFO 12944 --- [springboot-jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-21T15:33:11.318+08:00  INFO 12944 --- [springboot-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-21T15:33:11.437+08:00  INFO 12944 --- [springboot-jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e49437
+2025-05-21T15:33:11.438+08:00  INFO 12944 --- [springboot-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-21T15:33:11.495+08:00  INFO 12944 --- [springboot-jpa] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-21T15:33:12.072+08:00  INFO 12944 --- [springboot-jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-21T15:33:12.108+08:00  INFO 12944 --- [springboot-jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21T15:33:12.281+08:00  INFO 12944 --- [springboot-jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-21T15:33:12.700+08:00  INFO 12944 --- [springboot-jpa] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-05-21T15:33:12.933+08:00  INFO 12944 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-05-21T15:33:12.938+08:00  INFO 12944 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Started SpringbootJpaApplication in 3.394 seconds (process running for 3.858)
+2025-05-21T15:33:23.169+08:00  INFO 12944 --- [springboot-jpa] [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-05-21T15:33:23.171+08:00  INFO 12944 --- [springboot-jpa] [RMI TCP Connection(6)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-05-21T15:33:23.175+08:00  INFO 12944 --- [springboot-jpa] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-05-21T15:33:23.179+08:00  INFO 12944 --- [springboot-jpa] [RMI TCP Connection(6)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21T15:33:23.180+08:00  INFO 12944 --- [springboot-jpa] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-05-21T15:33:23.187+08:00  INFO 12944 --- [springboot-jpa] [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-05-21T15:33:24.964+08:00  INFO 25120 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Starting SpringbootJpaApplication using Java 21.0.6 with PID 25120 (C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa\target\classes started by Zenboo 13 in C:\Users\Zenboo 13\Downloads\Java\eclipse-workspace\springboot-jpa)
+2025-05-21T15:33:24.966+08:00  INFO 25120 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-05-21T15:33:25.410+08:00  INFO 25120 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-05-21T15:33:25.460+08:00  INFO 25120 --- [springboot-jpa] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 2 JPA repository interfaces.
+2025-05-21T15:33:25.825+08:00  INFO 25120 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-05-21T15:33:25.836+08:00  INFO 25120 --- [springboot-jpa] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-05-21T15:33:25.837+08:00  INFO 25120 --- [springboot-jpa] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-05-21T15:33:25.987+08:00  INFO 25120 --- [springboot-jpa] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-05-21T15:33:25.993+08:00  INFO 25120 --- [springboot-jpa] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-05-21T15:33:25.993+08:00  INFO 25120 --- [springboot-jpa] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 996 ms
+2025-05-21T15:33:26.107+08:00  INFO 25120 --- [springboot-jpa] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-05-21T15:33:26.154+08:00  INFO 25120 --- [springboot-jpa] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-05-21T15:33:26.179+08:00  INFO 25120 --- [springboot-jpa] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-05-21T15:33:26.379+08:00  INFO 25120 --- [springboot-jpa] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-05-21T15:33:26.401+08:00  INFO 25120 --- [springboot-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-05-21T15:33:26.522+08:00  INFO 25120 --- [springboot-jpa] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@15cee630
+2025-05-21T15:33:26.524+08:00  INFO 25120 --- [springboot-jpa] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-05-21T15:33:26.585+08:00  INFO 25120 --- [springboot-jpa] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-05-21T15:33:27.168+08:00  INFO 25120 --- [springboot-jpa] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-05-21T15:33:27.206+08:00  INFO 25120 --- [springboot-jpa] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-05-21T15:33:27.422+08:00  INFO 25120 --- [springboot-jpa] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-05-21T15:33:27.808+08:00  INFO 25120 --- [springboot-jpa] [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-05-21T15:33:28.053+08:00  INFO 25120 --- [springboot-jpa] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-05-21T15:33:28.059+08:00  INFO 25120 --- [springboot-jpa] [main] c.example.demo.SpringbootJpaApplication  : Started SpringbootJpaApplication in 3.407 seconds (process running for 3.876)
+2025-05-21T15:33:38.603+08:00  INFO 25120 --- [springboot-jpa] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-05-21T15:33:38.603+08:00  INFO 25120 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-05-21T15:33:38.603+08:00  INFO 25120 --- [springboot-jpa] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-05-21T15:34:30.976+08:00  WARN 25120 --- [springboot-jpa] [http-nio-8081-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present]
+2025-05-21T15:34:43.234+08:00  WARN 25120 --- [springboot-jpa] [http-nio-8081-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required request parameter 'username' for method parameter type String is not present]
+2025-05-21T15:47:24.602+08:00  WARN 25120 --- [springboot-jpa] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=3m57s819ms649µs900ns).

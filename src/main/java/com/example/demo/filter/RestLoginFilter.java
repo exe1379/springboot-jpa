@@ -2,35 +2,45 @@ package com.example.demo.filter;
 
 import java.io.IOException;
 
+import com.example.demo.response.ApiResponse;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
 import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.HttpFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@WebFilter(urlPatterns = {"/rest/*"} )
-public class RestLoginFilter {
+@WebFilter(urlPatterns = {"/rest/room/*", "/rest/rooms/*"}) // 需要登入才能訪問的路徑
+public class RestLoginFilter extends HttpFilter {
 
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-            throws IOException, ServletException {
-        
-        HttpServletRequest req = (HttpServletRequest) request;
-        HttpServletResponse resp = (HttpServletResponse) response;
-        HttpSession session = req.getSession(false); // 不強制創建
+	@Override
+	protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+		String method = request.getMethod();
 
-        boolean isLoggedIn = (session != null && session.getAttribute("userCert") != null);
-
-        if (!isLoggedIn) {
-            resp.setStatus(HttpServletResponse.SC_UNAUTHORIZED); // 401
-            resp.setContentType("application/json;charset=UTF-8");
-            resp.getWriter().write("{\"error\": \"尚未登入，請重新登入\"}");
+        // 開放 GET 查詢
+        if ("GET".equalsIgnoreCase(method)) {
+            chain.doFilter(request, response);
             return;
         }
-
-        // 已登入，放行
-        chain.doFilter(request, response);
-    }
+        
+        HttpSession session = request.getSession();
+        // 非 GET 時驗證登入狀態
+        if (session != null && session.getAttribute("userCert") != null) {
+            chain.doFilter(request, response); // 已登入，放行
+        } else {
+            // 未登入，回傳 401
+            response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
+            response.setContentType("application/json;charset=UTF-8");
+            ApiResponse<?> apiResponse = ApiResponse.error(401, "請先登入");
+            // 利用 ObjectMapper 將指定物件轉 json
+            ObjectMapper mapper = new ObjectMapper();
+            String json = mapper.writeValueAsString(apiResponse);
+            response.getWriter().write(json);
+        }
+	}
+	
 }
