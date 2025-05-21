@@ -11,7 +11,7 @@
 	<body>
 		<!-- menu bar include -->
 		<%@ include file="/WEB-INF/view/menu.jspf" %>
-		
+		<%=exception %>>
 		<!-- body content -->
 		<div style="padding: 15px">
 			<div class="pure-form">

@@ -15,8 +15,10 @@ import com.example.demo.repository.RoomRepository;
 import com.example.demo.service.RoomService;
 @Service
 public class RoomServiceImpl implements RoomService {
+	
 	@Autowired
 	private RoomRepository roomRepository;
+	
 	@Autowired
 	private RoomMapper roomMapper;
 	

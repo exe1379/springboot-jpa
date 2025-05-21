@@ -8,12 +8,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ApiResponse<T> {
+	private Integer status;
 	private String message;
 	T data;
 	public static <T> ApiResponse<T> success(String message , T data){
-		return new ApiResponse<T>(message, data);
+		return new ApiResponse<T>(200 ,message, data);
 	}
-	public static <T> ApiResponse<T> error(String message){
-		return new ApiResponse<T>(message,null);
+	public static <T> ApiResponse<T> error(int status, String message){
+		return new ApiResponse<T>(status, message, null);
 	}
 }
