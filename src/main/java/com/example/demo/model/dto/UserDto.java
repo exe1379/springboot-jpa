@@ -1,5 +1,8 @@
 package com.example.demo.model.dto;
 
+import lombok.Data;
+
+@Data
 // 屬性名稱可與對應 entity 不同
 public class UserDto {
 	// 前端不需要放 salt 與 password 因此不需要放

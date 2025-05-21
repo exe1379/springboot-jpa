@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.Exception.RoomAlreadyExistException;
 import com.example.demo.Exception.RoomNotFoundException;
-import com.example.demo.method.RoomMapper;
+import com.example.demo.mapper.RoomMapper;
 import com.example.demo.model.dto.RoomDto;
 import com.example.demo.model.entity.Room;
 import com.example.demo.repository.RoomRepository;
